@@ -18,7 +18,7 @@ This project attempts to answer that. By feeding historical student data into a 
 * **Explainability Framework:** SHAP (SHapley Additive exPlanations)
 * **Data Pipelines:** Pandas, NumPy
 * **Frontend & Presentation:** HTML5, Tailwind CSS, Vanilla JavaScript
-i wan;t the content to be this much only just the presentation and look to be at it;s best
+
 ---
 
 Built by Tanushree with 💜
