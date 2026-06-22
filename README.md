@@ -29,7 +29,7 @@ This project attempts to answer that. By feeding historical student data into a 
 
 Built by Tanushree with 💜
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tanu998975/)
 
-*[Connect with me on LinkedIn](www.linkedin.com/in/tanu998975)*
 
 
