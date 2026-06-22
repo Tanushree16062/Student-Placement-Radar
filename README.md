@@ -1,4 +1,4 @@
-# 🎓 Student Placement Predictor 
+# 🎓 Student Placement Radar
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HeTOPvcVu320e7Wh4mVIypp6k6eKe6zZ?usp=sharing)
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
