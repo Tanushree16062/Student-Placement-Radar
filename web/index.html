@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Placement Radar</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .bg-gradient-positive { background-image: linear-gradient(to right, #10b981, #059669); }
+        .bg-gradient-negative { background-image: linear-gradient(to left, #ef4444, #dc2626); }
+        .bg-gradient-neutral { background-image: linear-gradient(to right, #64748b, #475569); }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen font-sans">
+
+    <header class="border-b border-slate-800 bg-slate-950/50 backdrop-blur px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+            <div class="bg-indigo-600 p-2 rounded-lg text-white">
+                <i class="fa-solid fa-radar fa-lg animate-pulse"></i>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold tracking-tight text-white">STUDENT PLACEMENT RADAR</h1>
+                <p class="text-xs text-slate-400">Explainable AI & Live Diagnostic Guardrail Framework</p>
+            </div>
+        </div>
+        <div>
+            <span class="bg-emerald-500/10 text-emerald-400 text-xs px-2.5 py-1 rounded-full border border-emerald-500/20 font-medium">
+                <i class="fa-solid fa-circle text-[8px] mr-1.5 animate-ping"></i> Internal Memory Linked
+            </span>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-6 space-y-6">
+
+        <section class="bg-slate-950 border border-slate-800 rounded-xl p-5 shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+                <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wider">Search Workspace</h2>
+                <p class="text-xs text-slate-500">Enter a student ID manually to invoke active local data calculations.</p>
+            </div>
+            <div class="flex items-center space-x-2 w-full md:w-80">
+                <div class="relative flex-1">
+                    <i class="fa-solid fa-id-card absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-sm"></i>
+                    <input type="number" id="studentIdInput" value="320"
+                           onkeydown="if(event.key === 'Enter') { event.preventDefault(); loadStudentProfile(); }"
+                           class="w-full bg-slate-900 border border-slate-700 rounded-lg pl-9 pr-4 py-2 text-sm text-slate-200 focus:outline-none focus:border-indigo-500">
+                </div>
+                <button type="button" onclick="loadStudentProfile();" class="bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors cursor-pointer flex items-center space-x-2">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Analyze</span>
+                </button>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 shadow-xl space-y-6">
+                <div class="border-b border-slate-800 pb-4">
+                    <h3 class="font-bold text-lg text-white"><i class="fa-solid fa-address-card text-indigo-400 mr-2"></i>Profile Metrics Matrix</h3>
+                    <p class="text-xs text-slate-400 mt-1">Ingested real-time academic and skill variables.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <span class="text-xs font-semibold uppercase text-slate-400 tracking-wider block mb-2">Academic Performance</span>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-slate-900 border border-slate-800/80 p-3 rounded-lg">
+                                <p class="text-xs text-slate-500">Cumulative GPA</p>
+                                <p id="m_cgpa" class="text-lg font-bold text-slate-200 mt-0.5">N/A</p>
+                            </div>
+                            <div class="bg-slate-900 border border-slate-800/80 p-3 rounded-lg">
+                                <p class="text-xs text-slate-500">Grade Velocity</p>
+                                <p id="m_velocity" class="text-lg font-bold mt-0.5">N/A</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="text-xs font-semibold uppercase text-slate-400 tracking-wider block mb-2">Market Readiness</span>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-slate-900 border border-slate-800/80 p-3 rounded-lg">
+                                <p class="text-xs text-slate-500">Coding Score</p>
+                                <p id="m_coding" class="text-lg font-bold text-slate-200 mt-0.5">N/A</p>
+                            </div>
+                            <div class="bg-slate-900 border border-slate-800/80 p-3 rounded-lg">
+                                <p class="text-xs text-slate-500">Internships</p>
+                                <p id="m_internships" class="text-lg font-bold text-slate-200 mt-0.5">N/A</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="text-xs font-semibold uppercase text-slate-400 tracking-wider block mb-2">Communication & Income</span>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-slate-900 border border-slate-800/80 p-3 rounded-lg">
+                                <p class="text-xs text-slate-500">Communication Score</p>
+                                <p id="m_comm" class="text-lg font-bold text-slate-200 mt-0.5">N/A</p>
+                            </div>
+                            <div class="bg-slate-900 border border-slate-800/80 p-3 rounded-lg">
+                                <p class="text-xs text-slate-500">Family Income</p>
+                                <p id="m_income" class="text-lg font-bold text-slate-200 mt-0.5">N/A</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 bg-slate-950 border border-slate-800 rounded-xl p-6 shadow-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center border-b border-slate-800 pb-4">
+                        <h3 class="font-bold text-lg text-white"><i class="fa-solid fa-brain text-indigo-400 mr-2"></i>Explainable AI Output</h3>
+                        <div id="riskBadge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></div>
+                    </div>
+                    <div class="py-6 flex flex-col md:flex-row items-center gap-6">
+                        <div class="text-center min-w-[100px]">
+                            <p class="text-xs text-slate-400 uppercase tracking-wider mb-2">Placement Probability</p>
+                            <span id="gaugeText" class="text-3xl font-black text-white">0%</span>
+                            <div id="circlePulse" class="relative flex justify-center items-center mt-2">
+                                <div class="absolute w-12 h-12 rounded-full opacity-75 animate-ping" style="background-color: var(--circle-color);"></div>
+                                <div class="relative w-10 h-10 rounded-full" style="background-color: var(--circle-color);"></div>
+                            </div>
+                        </div>
+                        <div id="shapContainer" class="flex-1 space-y-3 w-full"></div>
+                    </div>
+                </div>
+                <div id="checklistContainer" class="border-t border-slate-800 pt-4 grid grid-cols-1 md:grid-cols-2 gap-2 text-xs"></div>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
