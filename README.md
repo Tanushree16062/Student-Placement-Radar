@@ -1,24 +1,24 @@
-# Student Placement Radar 🎓📡
-
-An end-to-end Machine Learning decision support framework that shifts traditional academic analytics from opaque binary classification into a fair, transparent, and market-adaptive tracking system.
+# 📡 STUDENT PLACEMENT RADAR
+> **A Sovereign Machine Learning Decision Support Framework for Equitable Career Forecasting.**
 ---
 
-## 📌 Overview
+## 🎭 The Manifesto: Decoding the Matrix
 
-When entering the final year of college, the biggest question on a student's mind is: *"Am I statistically on track to get placed?"* 
+When entering the final year of college, a single, high-stakes question dominates a student's trajectory: 
 
-This project attempts to answer that. By feeding historical student data into a **XGBoost Classifier**, this model identifies the underlying patterns of successful candidates and outputs an immediate binary prediction (`Placed` / `Not Placed`). 
+> *"Am I statistically on track to get placed?"* This project is an intentional architectural answer. By weaponizing a highly optimized **XGBoost Classifier** against multi-dimensional historical records, the core engine bypasses institutional guesswork to map complex student performance matrices directly onto clear, binary probability vectors (`Placed` / `Not Placed`). 
 
-**The Goal:** To give students an early reality check, and give college placement cells a tool to identify "at-risk" students who might need extra interview preparation.
+**The Mission:** Deliver an uncompromised, early reality check for candidates while equipping university placement cells with precise, data-driven diagnostic layers to flag and protect at-risk students before recruitment windows close.
 
 ---
 
-## ⚡ Tech Stack & Core Engine
-* **Machine Learning:** Python, XGBoost, Scikit-Learn
-* **Explainability Framework:** SHAP (SHapley Additive exPlanations)
-* **Data Pipelines:** Pandas, NumPy
-* **Frontend & Presentation:** HTML5, Tailwind CSS, Vanilla JavaScript
+## ⚡ Technical Architecture & Stack
 
+```text
+ 🧠 CORE ML ENGINE   ▸  Python • XGBoost Classifier • Scikit-Learn
+ 👁️ MODEL LOGIC      ▸  SHAP (SHapley Additive exPlanations)
+ 📊 DATA PIPELINES   ▸  Pandas • NumPy
+ 🎨 PRESENTATION UX  ▸  HTML5 Canvas • Tailwind CSS • Vanilla JS
 ---
 
 Built by Tanushree with 💜
